@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  document.documentElement.classList.add("js");
+
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener("click", (event) => {
       const targetId = link.getAttribute("href");
@@ -10,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const openModalButton = document.getElementById("open-contact-modal");
   const closeModalButton = document.getElementById("close-contact-modal");
   const contactModal = document.getElementById("contact-modal");
 
@@ -21,12 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.overflow = isOpen ? "hidden" : "";
   }
 
-  if (openModalButton) {
-    openModalButton.addEventListener("click", (event) => {
-      event.preventDefault();
-      setModalOpenState(true);
+  document
+    .querySelectorAll('[data-open-contact-modal="true"]')
+    .forEach((button) => {
+      button.addEventListener("click", (event) => {
+        event.preventDefault();
+        setModalOpenState(true);
+      });
     });
-  }
 
   if (closeModalButton) {
     closeModalButton.addEventListener("click", () => {
@@ -49,4 +52,25 @@ document.addEventListener("DOMContentLoaded", () => {
       setModalOpenState(false);
     }
   });
+
+  const revealElements = document.querySelectorAll("[data-reveal]");
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (prefersReducedMotion) {
+    revealElements.forEach((element) => element.classList.add("is-visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.14 }
+  );
+
+  revealElements.forEach((element) => observer.observe(element));
 });

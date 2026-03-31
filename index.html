@@ -31,26 +31,45 @@
     </header>
 
     <main>
-      <section class="hero container">
+      <section class="hero container" data-reveal>
         <div class="hero-layout">
           <div>
             <p class="badge">Фриланс веб-разработчик</p>
             <h1>
-              Делаю сайты, которые выглядят современно и помогают бизнесу
-              получать больше заявок
+              Создаю современные сайты для бизнеса: быстро, аккуратно и с
+              акцентом на результат
             </h1>
             <p class="subtitle">
-              Проектирую и разрабатываю быстрые, адаптивные и понятные сайты:
-              лендинги, корпоративные страницы и интернет-магазины Lite.
+              Соединяю дизайн, скорость и функционал: делаю проекты, которые
+              приятно показывать клиентам и выгодно запускать в рекламу.
             </p>
             <div class="hero-actions">
-              <button class="btn btn-primary" id="open-contact-modal" type="button">
+              <button
+                class="btn btn-primary"
+                id="open-contact-modal"
+                data-open-contact-modal="true"
+                type="button"
+              >
                 Обсудить проект
               </button>
               <a class="btn btn-secondary" href="#projects">Смотреть кейсы</a>
             </div>
+            <div class="hero-stats">
+              <article>
+                <p>4</p>
+                <span>демо-проекта</span>
+              </article>
+              <article>
+                <p>24ч</p>
+                <span>на первый ответ</span>
+              </article>
+              <article>
+                <p>95+</p>
+                <span>баллов Lighthouse</span>
+              </article>
+            </div>
           </div>
-          <div class="hero-panel">
+          <div class="hero-panel" data-reveal>
             <p class="hero-panel-title">Что получаете после запуска</p>
             <ul>
               <li>Адаптив на телефонах, планшетах и десктопе</li>
@@ -62,14 +81,30 @@
         </div>
       </section>
 
-      <section id="projects" class="section container">
+      <section class="section container trust-strip" data-reveal>
+        <article>
+          <p>Технологичный UI</p>
+          <span>Анимации, микровзаимодействия, современная сетка</span>
+        </article>
+        <article>
+          <p>Быстрый запуск</p>
+          <span>От идеи до релиза в среднем за 3-7 дней</span>
+        </article>
+        <article>
+          <p>Коммерческий фокус</p>
+          <span>Структура страницы под заявки и продажи</span>
+        </article>
+      </section>
+
+      <section id="projects" class="section container" data-reveal>
         <h2>Мои демо-кейсы</h2>
         <p class="section-text">
           Все проекты ниже - учебные демо-кейсы, оформленные в формате реальных
           коммерческих задач.
         </p>
         <div class="projects-grid">
-          <article class="card">
+          <article class="card" data-reveal>
+            <div class="project-preview preview-dentacare"></div>
             <h3>DentaCare</h3>
             <p>
               Лендинг стоматологии с онлайн-записью, блоком услуг, отзывами и
@@ -83,7 +118,8 @@
             <a href="./projects/dentacare.html">Открыть кейс</a>
           </article>
 
-          <article class="card">
+          <article class="card" data-reveal>
+            <div class="project-preview preview-burger"></div>
             <h3>Neon Burger</h3>
             <p>
               Сайт для кафе с меню, акциями и формой бронирования столика под
@@ -97,7 +133,8 @@
             <a href="./projects/neon-burger.html">Открыть кейс</a>
           </article>
 
-          <article class="card">
+          <article class="card" data-reveal>
+            <div class="project-preview preview-shoplite"></div>
             <h3>ShopLite</h3>
             <p>
               Мини интернет-магазин со списком товаров, фильтрами и корзиной
@@ -111,7 +148,8 @@
             <a href="./projects/shoplite.html">Открыть кейс</a>
           </article>
 
-          <article class="card">
+          <article class="card" data-reveal>
+            <div class="project-preview preview-legalpro"></div>
             <h3>LegalPro Group</h3>
             <p>
               Корпоративный сайт юридической компании: услуги, кейсы, команда и
@@ -127,20 +165,20 @@
         </div>
       </section>
 
-      <section id="services" class="section container">
+      <section id="services" class="section container" data-reveal>
         <h2>Форматы работ и цены</h2>
         <div class="pricing-grid">
-          <article class="card">
+          <article class="card" data-reveal>
             <h3>Лендинг</h3>
             <p class="price">от 7 000 ₽</p>
             <p>До 7 блоков, адаптив, форма заявки, базовая SEO-структура.</p>
           </article>
-          <article class="card">
+          <article class="card" data-reveal>
             <h3>Многостраничный сайт</h3>
             <p class="price">от 15 000 ₽</p>
             <p>Главная + 3-5 страниц, единый стиль, удобная админ-логика.</p>
           </article>
-          <article class="card">
+          <article class="card" data-reveal>
             <h3>Интернет-магазин Lite</h3>
             <p class="price">от 25 000 ₽</p>
             <p>Каталог, карточка товара, корзина, формы и аналитика.</p>
@@ -148,7 +186,34 @@
         </div>
       </section>
 
-      <section id="about" class="section container">
+      <section class="section container" data-reveal>
+        <h2>Почему такой сайт хочется купить</h2>
+        <div class="proof-grid">
+          <article class="card" data-reveal>
+            <h3>Сильный визуал</h3>
+            <p>
+              Яркий современный дизайн, который выделяет бизнес среди типовых
+              шаблонов и повышает доверие с первых секунд.
+            </p>
+          </article>
+          <article class="card" data-reveal>
+            <h3>Логика продаж</h3>
+            <p>
+              Каждый блок работает на действие: оставить заявку, написать в
+              Telegram или заказать консультацию.
+            </p>
+          </article>
+          <article class="card" data-reveal>
+            <h3>Технологичность</h3>
+            <p>
+              Чистый код, быстрая загрузка, адаптив на любые устройства и
+              аккуратная структура для поддержки.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="section container" data-reveal>
         <h2>Обо мне</h2>
         <p class="section-text">
           Я веб-разработчик, создаю сайты с нуля на чистом коде (HTML, CSS,
@@ -166,7 +231,7 @@
         </div>
       </section>
 
-      <section id="contacts" class="section container contact">
+      <section id="contacts" class="section container contact" data-reveal>
         <h2>Контакты</h2>
         <p class="section-text">
           Готов обсудить проект и назвать сроки в течение 24 часов.
@@ -179,6 +244,51 @@
           <a href="https://github.com/TimaGimpelevich" target="_blank" rel="noreferrer"
             >github.com/TimaGimpelevich</a
           >
+        </div>
+      </section>
+
+      <section class="section container process" data-reveal>
+        <h2>Как я делаю сайты под ключ</h2>
+        <div class="process-grid">
+          <article class="process-step">
+            <span>01</span>
+            <h3>Бриф и цели</h3>
+            <p>Определяем задачу бизнеса, целевую аудиторию и KPI проекта.</p>
+          </article>
+          <article class="process-step">
+            <span>02</span>
+            <h3>Прототип и структура</h3>
+            <p>Собираю удобный сценарий, чтобы пользователь доходил до заявки.</p>
+          </article>
+          <article class="process-step">
+            <span>03</span>
+            <h3>Дизайн и разработка</h3>
+            <p>Создаю чистый интерфейс, адаптив, анимации и быстрый фронтенд.</p>
+          </article>
+          <article class="process-step">
+            <span>04</span>
+            <h3>Запуск и поддержка</h3>
+            <p>Публикация, проверка, объяснение управления сайтом и сопровождение.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container final-cta" data-reveal>
+        <h2>Готов помочь с сайтом под ваши задачи</h2>
+        <p>
+          Если нужен современный и понятный сайт с акцентом на заявки - напишите,
+          и я предложу решение под ваш бизнес уже сегодня.
+        </p>
+        <div class="hero-actions">
+          <button
+            class="btn btn-primary"
+            id="open-contact-modal-bottom"
+            data-open-contact-modal="true"
+            type="button"
+          >
+            Приступить
+          </button>
+          <a class="btn btn-secondary" href="#contacts">Смотреть контакты</a>
         </div>
       </section>
     </main>
