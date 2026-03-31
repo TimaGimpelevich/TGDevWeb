@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тимофей | Веб-разработчик</title>
+    <meta
+      name="description"
+      content="Портфолио веб-разработчика: лендинги, корпоративные сайты и интернет-магазины."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <a href="#" class="logo">TG WebDev</a>
+        <nav>
+          <a href="#projects">Проекты</a>
+          <a href="#services">Услуги</a>
+          <a href="#about">Обо мне</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero-layout">
+          <div>
+            <p class="badge">Фриланс веб-разработчик</p>
+            <h1>
+              Делаю сайты, которые выглядят современно и помогают бизнесу
+              получать больше заявок
+            </h1>
+            <p class="subtitle">
+              Проектирую и разрабатываю быстрые, адаптивные и понятные сайты:
+              лендинги, корпоративные страницы и интернет-магазины Lite.
+            </p>
+            <div class="hero-actions">
+              <button class="btn btn-primary" id="open-contact-modal" type="button">
+                Обсудить проект
+              </button>
+              <a class="btn btn-secondary" href="#projects">Смотреть кейсы</a>
+            </div>
+          </div>
+          <div class="hero-panel">
+            <p class="hero-panel-title">Что получаете после запуска</p>
+            <ul>
+              <li>Адаптив на телефонах, планшетах и десктопе</li>
+              <li>Чистый код и понятная структура проекта</li>
+              <li>Быстрая загрузка и базовая SEO-готовность</li>
+              <li>Поддержка и объяснение как управлять сайтом</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section container">
+        <h2>Мои демо-кейсы</h2>
+        <p class="section-text">
+          Все проекты ниже - учебные демо-кейсы, оформленные в формате реальных
+          коммерческих задач.
+        </p>
+        <div class="projects-grid">
+          <article class="card">
+            <h3>DentaCare</h3>
+            <p>
+              Лендинг стоматологии с онлайн-записью, блоком услуг, отзывами и
+              CTA-кнопками для роста конверсии.
+            </p>
+            <ul>
+              <li>Тип: Landing Page</li>
+              <li>Стек: HTML, CSS, JavaScript</li>
+              <li>Цель: больше заявок на прием</li>
+            </ul>
+            <a href="./projects/dentacare.html">Открыть кейс</a>
+          </article>
+
+          <article class="card">
+            <h3>Neon Burger</h3>
+            <p>
+              Сайт для кафе с меню, акциями и формой бронирования столика под
+              мобильные устройства.
+            </p>
+            <ul>
+              <li>Тип: Сайт услуг</li>
+              <li>Стек: HTML, CSS, JavaScript</li>
+              <li>Цель: бронь столиков онлайн</li>
+            </ul>
+            <a href="./projects/neon-burger.html">Открыть кейс</a>
+          </article>
+
+          <article class="card">
+            <h3>ShopLite</h3>
+            <p>
+              Мини интернет-магазин со списком товаров, фильтрами и корзиной
+              для теста пользовательского сценария покупки.
+            </p>
+            <ul>
+              <li>Тип: E-commerce Lite</li>
+              <li>Стек: HTML, CSS, JavaScript</li>
+              <li>Цель: повысить онлайн-продажи</li>
+            </ul>
+            <a href="./projects/shoplite.html">Открыть кейс</a>
+          </article>
+
+          <article class="card">
+            <h3>LegalPro Group</h3>
+            <p>
+              Корпоративный сайт юридической компании: услуги, кейсы, команда и
+              консультация.
+            </p>
+            <ul>
+              <li>Тип: Корпоративный сайт</li>
+              <li>Стек: HTML, CSS, JavaScript</li>
+              <li>Цель: сбор лидов с SEO-трафика</li>
+            </ul>
+            <a href="./projects/legalpro.html">Открыть кейс</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="services" class="section container">
+        <h2>Форматы работ и цены</h2>
+        <div class="pricing-grid">
+          <article class="card">
+            <h3>Лендинг</h3>
+            <p class="price">от $120</p>
+            <p>До 7 блоков, адаптив, форма заявки, базовая SEO-структура.</p>
+          </article>
+          <article class="card">
+            <h3>Многостраничный сайт</h3>
+            <p class="price">от $280</p>
+            <p>Главная + 3-5 страниц, единый стиль, удобная админ-логика.</p>
+          </article>
+          <article class="card">
+            <h3>Интернет-магазин Lite</h3>
+            <p class="price">от $450</p>
+            <p>Каталог, карточка товара, корзина, формы и аналитика.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="section container">
+        <h2>Обо мне</h2>
+        <p class="section-text">
+          Я веб-разработчик, создаю сайты с нуля на чистом коде (HTML, CSS,
+          JavaScript, React, Ruby/Node). Делаю адаптивные и быстрые решения, с
+          понятной структурой и функционалом. Работаю качественно, аккуратно,
+          всегда на связи и готов объяснить, как управлять сайтом после запуска.
+        </p>
+        <div class="skills">
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>JavaScript</span>
+          <span>Responsive</span>
+          <span>Git & GitHub</span>
+          <span>Vercel / Netlify</span>
+        </div>
+      </section>
+
+      <section id="contacts" class="section container contact">
+        <h2>Контакты</h2>
+        <p class="section-text">
+          Готов обсудить проект и назвать сроки в течение 24 часов.
+        </p>
+        <div class="contact-grid">
+          <a href="mailto:tigimpa@gmail.com">tigimpa@gmail.com</a>
+          <a href="https://t.me/atfnttfy" target="_blank" rel="noreferrer"
+            >@atfnttfy</a
+          >
+          <a href="https://github.com/TimaGimpelevich" target="_blank" rel="noreferrer"
+            >github.com/TimaGimpelevich</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <div class="modal" id="contact-modal" aria-hidden="true" hidden>
+      <div class="modal-backdrop" data-close-modal="true"></div>
+      <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" id="close-contact-modal" type="button" aria-label="Закрыть">
+          ×
+        </button>
+        <h2 id="modal-title">Где удобно продолжить общение?</h2>
+        <p class="section-text">
+          Выберите удобный канал, и я отвечу в ближайшее время.
+        </p>
+        <div class="modal-actions">
+          <a href="mailto:tigimpa@gmail.com">Email: tigimpa@gmail.com</a>
+          <a href="https://t.me/atfnttfy" target="_blank" rel="noreferrer">
+            Telegram: @atfnttfy
+          </a>
+          <a href="https://github.com/TimaGimpelevich" target="_blank" rel="noreferrer">
+            GitHub: TimaGimpelevich
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Timofey Gimpelevich. Demo portfolio.</p>
+      </div>
+    </footer>
+
+    <script src="./scripts.js"></script>
+  </body>
+</html>
