@@ -211,21 +211,14 @@
           Добавляю отзывы клиентов после завершения проектов. Если мы уже
           работали вместе, буду благодарен за 1-2 предложения о сотрудничестве.
         </p>
-        <div class="reviews-grid">
-          <article class="review-card">
-            <p class="review-text">Здесь будет отзыв клиента.</p>
-          </article>
-          <article class="review-card">
-            <p class="review-text">Здесь будет отзыв клиента.</p>
-          </article>
-        </div>
+        <div class="reviews-grid" id="reviews-grid-root" aria-live="polite"></div>
       </section>
 
       <section id="review-form" class="section container lead-section" data-reveal>
         <h2>Форма отзыва</h2>
         <p class="section-text">
           Если мы уже работали вместе, оставьте короткий отзыв. Он будет
-          сохранен на этом устройстве и поможет обновить секцию отзывов.
+          сохранен на этом устройстве и появится в секции «Отзывы» выше.
         </p>
         <form id="review-form-submit" class="request-form">
           <label>
@@ -240,10 +233,6 @@
           <button class="btn btn-primary" type="submit">Сохранить отзыв</button>
           <p id="review-status" class="request-status" aria-live="polite"></p>
         </form>
-        <div class="requests-log" id="reviews-log" hidden>
-          <h3>Сохраненные отзывы</h3>
-          <ul id="reviews-list"></ul>
-        </div>
       </section>
 
       <section id="about" class="section container" data-reveal>

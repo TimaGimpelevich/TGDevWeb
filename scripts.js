@@ -14,30 +14,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const reviewForm = document.getElementById("review-form-submit");
   const reviewStatus = document.getElementById("review-status");
-  const reviewsLog = document.getElementById("reviews-log");
-  const reviewsList = document.getElementById("reviews-list");
+  const reviewsGridRoot = document.getElementById("reviews-grid-root");
 
   const revealElements = document.querySelectorAll("[data-reveal]");
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   const reviewsStorageKey = "tgdev_reviews";
 
-  function renderReviews() {
-    if (!reviewsLog || !reviewsList) return;
+  function loadReviewsFromStorage() {
     const raw = localStorage.getItem(reviewsStorageKey);
-    const reviews = raw ? JSON.parse(raw) : [];
-    reviewsList.innerHTML = "";
+    if (!raw) return [];
+    try {
+      const parsed = JSON.parse(raw);
+      return Array.isArray(parsed) ? parsed : [];
+    } catch {
+      return [];
+    }
+  }
+
+  function renderReviews() {
+    if (!reviewsGridRoot) return;
+    const reviews = loadReviewsFromStorage();
+    reviewsGridRoot.innerHTML = "";
 
     if (!reviews.length) {
-      reviewsLog.hidden = true;
+      for (let i = 0; i < 2; i += 1) {
+        const card = document.createElement("article");
+        card.className = "review-card";
+        const p = document.createElement("p");
+        p.className = "review-text";
+        p.textContent = "Здесь будет отзыв клиента.";
+        card.appendChild(p);
+        reviewsGridRoot.appendChild(card);
+      }
       return;
     }
 
-    reviewsLog.hidden = false;
-    reviews.slice(0, 8).forEach((review) => {
-      const item = document.createElement("li");
-      item.textContent = review.message;
-      reviewsList.appendChild(item);
+    reviews.slice(0, 12).forEach((review) => {
+      const card = document.createElement("article");
+      card.className = "review-card";
+      const p = document.createElement("p");
+      p.className = "review-text";
+      p.textContent = review.message || "";
+      card.appendChild(p);
+      reviewsGridRoot.appendChild(card);
     });
   }
 
