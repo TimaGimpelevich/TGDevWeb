@@ -24,10 +24,8 @@
         <nav>
           <a href="#projects">Проекты</a>
           <a href="#reviews">Отзывы</a>
-          <a href="#lead-form">Заявка</a>
           <a href="#services">Услуги</a>
           <a href="#about">Обо мне</a>
-          <a href="#contacts">Контакты</a>
         </nav>
       </div>
     </header>
@@ -46,8 +44,8 @@
               приятно показывать клиентам и выгодно запускать в рекламу.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#lead-form">Оставить заявку</a>
-              <a class="btn btn-secondary" href="#projects">Смотреть кейсы</a>
+              <a class="btn btn-primary" href="#projects">Смотреть кейсы</a>
+              <a class="btn btn-secondary" href="#services">Услуги и цены</a>
             </div>
             <div class="hero-stats">
               <article>
@@ -55,8 +53,8 @@
                 <span>демо-проекта</span>
               </article>
               <article>
-                <p>24ч</p>
-                <span>на первый ответ</span>
+                <p>3–7</p>
+                <span>дней средний запуск</span>
               </article>
               <article>
                 <p>95+</p>
@@ -87,7 +85,7 @@
         </article>
         <article>
           <p>Коммерческий фокус</p>
-          <span>Структура страницы под заявки и продажи</span>
+          <span>Структура страницы под конверсию и продажи</span>
         </article>
       </section>
 
@@ -166,7 +164,7 @@
           <article class="card" data-reveal>
             <h3>Лендинг</h3>
             <p class="price">от 7 000 ₽</p>
-            <p>До 7 блоков, адаптив, форма заявки, базовая SEO-структура.</p>
+            <p>До 7 блоков, адаптив, CTA-блоки, базовая SEO-структура.</p>
           </article>
           <article class="card" data-reveal>
             <h3>Многостраничный сайт</h3>
@@ -194,8 +192,7 @@
           <article class="card" data-reveal>
             <h3>Логика продаж</h3>
             <p>
-              Каждый блок работает на действие: оставить заявку, написать в
-              Telegram или заказать консультацию.
+              Каждый блок ведёт к целевому действию: запись, покупка, консультация.
             </p>
           </article>
           <article class="card" data-reveal>
@@ -249,86 +246,21 @@
         </div>
       </section>
 
-      <section id="lead-form" class="section container lead-section" data-reveal>
-        <h2>Оставить заявку</h2>
-        <p class="section-text">
-          Оставьте контакт и задачу прямо на сайте. Я сохраню запрос и свяжусь с
-          вами в течение 24 часов.
-        </p>
-        <form id="request-form" class="request-form">
-          <label>
-            Имя
-            <input type="text" name="name" required placeholder="Как к вам обращаться" />
-          </label>
-          <label>
-            Контакт для связи
-            <input
-              type="text"
-              name="contact"
-              required
-              placeholder="Telegram, email или телефон"
-            />
-          </label>
-          <label>
-            Тип проекта
-            <select name="projectType" required>
-              <option value="">Выберите вариант</option>
-              <option>Лендинг</option>
-              <option>Многостраничный сайт</option>
-              <option>Интернет-магазин</option>
-              <option>Доработка существующего сайта</option>
-            </select>
-          </label>
-          <label>
-            Кратко о задаче
-            <textarea
-              name="message"
-              rows="4"
-              required
-              placeholder="Что нужно сделать, сроки и пожелания"
-            ></textarea>
-          </label>
-          <button class="btn btn-primary" type="submit">Отправить заявку</button>
-          <p id="request-status" class="request-status" aria-live="polite"></p>
-        </form>
-        <div class="requests-log" id="requests-log" hidden>
-          <h3>Последние сохраненные заявки</h3>
-          <ul id="requests-list"></ul>
-        </div>
-      </section>
-
       <section id="about" class="section container" data-reveal>
         <h2>Обо мне</h2>
         <p class="section-text">
           Я веб-разработчик, создаю сайты с нуля на чистом коде (HTML, CSS,
           JavaScript, React, Ruby/Node). Делаю адаптивные и быстрые решения, с
-          понятной структурой и функционалом. Работаю качественно, аккуратно,
-          всегда на связи и готов объяснить, как управлять сайтом после запуска.
+          понятной структурой и функционалом. Работаю качественно, аккуратно
+          и готов объяснить, как управлять сайтом после запуска.
         </p>
         <div class="skills">
           <span>HTML5</span>
           <span>CSS3</span>
           <span>JavaScript</span>
           <span>Responsive</span>
-          <span>Git & GitHub</span>
+          <span>Git</span>
           <span>Vercel / Netlify</span>
-        </div>
-      </section>
-
-      <section id="contacts" class="section container contact" data-reveal>
-        <h2>Контакты</h2>
-        <p class="section-text">
-          Основной способ связи - форма заявки выше. Для быстрого контакта
-          можно также использовать Telegram и почту.
-        </p>
-        <div class="contact-grid">
-          <a href="mailto:tigimpa@gmail.com">tigimpa@gmail.com</a>
-          <a href="https://t.me/atfnttfy" target="_blank" rel="noreferrer"
-            >@atfnttfy</a
-          >
-          <a href="https://github.com/TimaGimpelevich" target="_blank" rel="noreferrer"
-            >github.com/TimaGimpelevich</a
-          >
         </div>
       </section>
 
@@ -343,7 +275,7 @@
           <article class="process-step">
             <span>02</span>
             <h3>Прототип и структура</h3>
-            <p>Собираю удобный сценарий, чтобы пользователь доходил до заявки.</p>
+            <p>Собираю удобный сценарий, чтобы пользователь доходил до целевого действия.</p>
           </article>
           <article class="process-step">
             <span>03</span>
@@ -359,28 +291,6 @@
       </section>
 
     </main>
-
-    <div class="modal" id="contact-modal" aria-hidden="true" hidden>
-      <div class="modal-backdrop" data-close-modal="true"></div>
-      <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <button class="modal-close" id="close-contact-modal" type="button" aria-label="Закрыть">
-          ×
-        </button>
-        <h2 id="modal-title">Где удобно продолжить общение?</h2>
-        <p class="section-text">
-          Выберите удобный канал. На кнопки ниже можно сразу нажать.
-        </p>
-        <div class="modal-actions">
-          <a href="mailto:tigimpa@gmail.com">Написать на почту: tigimpa@gmail.com</a>
-          <a href="https://t.me/atfnttfy" target="_blank" rel="noreferrer">
-            Написать в Telegram: @atfnttfy
-          </a>
-          <a href="https://github.com/TimaGimpelevich" target="_blank" rel="noreferrer">
-            GitHub профиль: TimaGimpelevich
-          </a>
-        </div>
-      </div>
-    </div>
 
     <footer class="footer">
       <div class="container">
